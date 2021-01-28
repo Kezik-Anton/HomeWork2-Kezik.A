@@ -25,8 +25,11 @@ console.log(firstName + ' родился в ' + year + ' году.');
 
 console.log('// Задание 3. Сумма первых трех цифр равна сумму последних трех цифр шестизначного числа?');
 
-let numTask = prompt('task 3. Введите шестизначное число?'),
-    number1 = parseInt(numTask / 100000);
+let numTask = prompt('task 3. Введите целое шестизначное число?');
+
+if (numTask > 99999 && numTask <= 999999) {
+
+let number1 = parseInt(numTask / 100000);
     number2 = parseInt((numTask - number1 * 100000) / 10000);
     number3 = parseInt((numTask - number1 * 100000 - number2 * 10000) / 1000);
     number4 = parseInt((numTask - number1 * 100000 - number2 * 10000 - number3 * 1000) / 100);
@@ -35,10 +38,14 @@ let numTask = prompt('task 3. Введите шестизначное число
     firstSum = number1 + number2 + number3;
     lastSum = number4 + number5 + number6;
 
-console.log('Полученные числа: "' + number1 + '" "' + number2 + '" "' + number3 + '" "' + number4 + '" "' + number5 + '" "' + number6 + '"');
+console.log('Введенное число ' + numTask);
+console.log('Полученные числа: "' + number1 + '", "' + number2 + '", "' + number3 + '", "' + number4 + '", "' + number5 + '", "' + number6 + '"');
 
 (firstSum == lastSum) ? console.log('Да') : console.log('Нет');
 
+} else {
+    alert('Вы ввели неправильное число. Попробуйте в следующий раз ;)');    
+}
 
 // task 4
 
