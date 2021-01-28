@@ -1,11 +1,11 @@
 // task 1
 console.log('Задание 1. Создать переменные, вывести на экран фразу');
 
-let name,
-    age,
-    city,
-    phone,
-    email,
-    company;
+let name = prompt('Ваше имя?'),
+    age = prompt('Ваш вораст?'), 
+    city = prompt('Ваш город проживания?'), 
+    phone = prompt('Ваш телефон?'), 
+    email = prompt('Ваша электронная почта?'), 
+    company = prompt('Ваше место работы?'); 
 
-    
+console.log('Меня зовут ' + name + '. Мне ' + age + ' лет. Я проживаю в городе ' + city + ' и работаю в компании ' + company + '. Мои контактные данные: ' + phone + ', ' + email + '.');
